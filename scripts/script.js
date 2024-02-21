@@ -17,6 +17,15 @@ for (const btn of allBtn) {
         btn.classList.add("bg-green-700","text-white");
     });
 
+
+
 }
 
 
+const mybtn = document.getElementsByClassName("add-btn") ;
+
+for(const countBtn of mybtn){
+    countBtn.addEventListener('click',function (event) {
+        console.log("Hasan");
+    })
+}
