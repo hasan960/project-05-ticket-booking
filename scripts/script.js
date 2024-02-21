@@ -46,22 +46,29 @@ for (const btn of allBtn) {
         mydiv.appendChild(p1);
         mydiv.appendChild(p2);
         mydiv.appendChild(p3);
-
         selectedClass.appendChild(mydiv);
+        totalCost(ticketPrice);
 
 
     });
 
+}
+
+
+function totalCost(value) {
+    
+    const totalSum = convertValue("total-cost") ;
+    const sum = totalSum + parseInt(value);
+    document.getElementById("total-cost").innerText = sum ;
 
 
 }
 
-/*
-const mybtn = document.getElementsByClassName("add-btn") ;
 
-for(const countBtn of mybtn){
-    countBtn.addEventListener('click',function (event) {
-        console.log("Hasan");
-    })
+
+
+function convertValue(id){
+    const price = document.getElementById(id).innerText;
+    const convertPrice = parseInt(price);
+    return convertPrice ;
 }
-*/
