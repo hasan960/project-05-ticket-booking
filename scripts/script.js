@@ -19,9 +19,44 @@ for (const btn of allBtn) {
 
 
 
+
+
+
+
+    //--- All button clicble --//
+
+    btn.addEventListener('click',function (event) {
+        const btnName = event.target.innerText ;
+        const ticketPrice = 550 ;
+        const className = "Economy"
+
+        const selectedClass = document.getElementById("mySelectedClass");
+
+        const mydiv = document.createElement('div') ;
+        const addClassFromCss = mydiv.classList.add("selected_contets");
+
+        const p1 = document.createElement('p') ;
+        const p2 = document.createElement('p') ;
+        const p3 =document.createElement('p') ;
+
+        p1.innerText = btnName ;
+        p2.innerText = className ;
+        p3.innerText = ticketPrice ;
+        
+        mydiv.appendChild(p1);
+        mydiv.appendChild(p2);
+        mydiv.appendChild(p3);
+
+        selectedClass.appendChild(mydiv);
+
+
+    });
+
+
+
 }
 
-
+/*
 const mybtn = document.getElementsByClassName("add-btn") ;
 
 for(const countBtn of mybtn){
@@ -29,3 +64,4 @@ for(const countBtn of mybtn){
         console.log("Hasan");
     })
 }
+*/
